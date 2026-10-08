@@ -1,0 +1,6 @@
+{
+  "name": "SOVEREIGN — Global Conquest Strategy",
+  "description": "A cinematic real-time multiplayer tactical world domination game inspired by classic Risk, featuring a Command Center Host display and synchronized mobile player controllers.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
