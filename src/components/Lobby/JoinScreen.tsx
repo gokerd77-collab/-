@@ -39,10 +39,10 @@ export const JoinScreen: React.FC<JoinScreenProps> = ({ room, onJoin, isLoading 
             JOIN BATTLE · غرفة {room.roomCode}
           </span>
           <h1 className="text-2xl font-extrabold text-white">
-            انضم إلى المعركة الكبرى
+            انضم إلى صراع القلاع
           </h1>
           <p className="text-xs text-slate-400">
-            أدخل اسمك واختر مجموعتك للمشاركة في الحرب العالمية
+            أدخل اسمك واختر قلعتك للمشاركة (الأسود، الذئاب، أو الصقور)
           </p>
         </div>
 
@@ -75,7 +75,7 @@ export const JoinScreen: React.FC<JoinScreenProps> = ({ room, onJoin, isLoading 
           {/* Group / Team Selection */}
           <div className="space-y-2 text-right">
             <label className="text-xs font-semibold text-slate-300 block">
-              اختر مجموعتك ولونك:
+              اختر قلعتك وانضم لصفوفها:
             </label>
             <div className="grid grid-cols-2 gap-2.5">
               {room.teams.map((team) => {

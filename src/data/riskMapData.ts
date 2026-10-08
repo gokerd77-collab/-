@@ -479,55 +479,31 @@ export const TERRITORY_LOOKUP = new Map<string, Territory>(
   TERRITORIES.map((t) => [t.id, t])
 );
 
-// Default Pre-Configured Teams
+// Default Pre-Configured Teams: 3 Castles (الأسود، الذئاب، الصقور)
 export const DEFAULT_TEAMS_CONFIG = [
   {
-    id: 'team_crimson',
-    name: 'الفيلق الأحمر',
-    nameAr: 'الفيلق الأحمر',
-    color: '#EF4444', // Red 500
-    secondaryColor: '#991B1B',
-    icon: 'Sword'
+    id: 'team_lions',
+    name: 'الأسود',
+    nameAr: 'قلعة الأسود',
+    color: '#F59E0B', // Royal Gold/Amber
+    secondaryColor: '#B45309',
+    icon: 'Crown'
   },
   {
-    id: 'team_azure',
-    name: 'الدرع الأزرق',
-    nameAr: 'الدرع الأزرق',
-    color: '#3B82F6', // Blue 500
+    id: 'team_wolves',
+    name: 'الذئاب',
+    nameAr: 'قلعة الذئاب',
+    color: '#3B82F6', // Deep Azure Blue
     secondaryColor: '#1E40AF',
     icon: 'Shield'
   },
   {
-    id: 'team_emerald',
-    name: 'الفرقة الخضراء',
-    nameAr: 'الفرقة الخضراء',
-    color: '#10B981', // Emerald 500
+    id: 'team_falcons',
+    name: 'الصقور',
+    nameAr: 'قلعة الصقور',
+    color: '#10B981', // Emerald Green
     secondaryColor: '#065F46',
-    icon: 'Crown'
-  },
-  {
-    id: 'team_amber',
-    name: 'العاصفة الصفراء',
-    nameAr: 'العاصفة الصفراء',
-    color: '#F59E0B', // Amber 500
-    secondaryColor: '#92400E',
-    icon: 'Zap'
-  },
-  {
-    id: 'team_violet',
-    name: 'النسر البنفسجي',
-    nameAr: 'النسر البنفسجي',
-    color: '#8B5CF6', // Purple 500
-    secondaryColor: '#5B21B6',
-    icon: 'Compass'
-  },
-  {
-    id: 'team_cyan',
-    name: 'الصقر السماوي',
-    nameAr: 'الصقر السماوي',
-    color: '#06B6D4', // Cyan 500
-    secondaryColor: '#0E7490',
-    icon: 'Anchor'
+    icon: 'Sword'
   }
 ];
 

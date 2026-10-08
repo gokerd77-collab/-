@@ -286,7 +286,7 @@ export const RiskWorldMap: React.FC<RiskWorldMapProps> = ({
           {/* Territory Nodes and Markers */}
           <g className="territories">
             {TERRITORIES.map((territory) => {
-              const state = room.territories[territory.id] || { troops: 1, teamId: 'team_crimson' };
+              const state = room.territories[territory.id] || { troops: 3, teamId: 'team_lions' };
               const team = teamsMap.get(state.teamId) || { color: '#64748B', nameAr: 'محايد' };
               const isSelected = selectedTerritoryId === territory.id;
               const isTarget = targetTerritoryId === territory.id;

@@ -205,12 +205,9 @@ const TERRITORIES: Territory[] = [
 ];
 
 const DEFAULT_TEAMS = [
-  { id: 'team_crimson', name: 'الفيلق الأحمر', nameAr: 'الفيلق الأحمر', color: '#EF4444', secondaryColor: '#991B1B', icon: 'Sword' },
-  { id: 'team_azure', name: 'الدرع الأزرق', nameAr: 'الدرع الأزرق', color: '#3B82F6', secondaryColor: '#1E40AF', icon: 'Shield' },
-  { id: 'team_emerald', name: 'الفرقة الخضراء', nameAr: 'الفرقة الخضراء', color: '#10B981', secondaryColor: '#065F46', icon: 'Crown' },
-  { id: 'team_amber', name: 'العاصفة الصفراء', nameAr: 'العاصفة الصفراء', color: '#F59E0B', secondaryColor: '#92400E', icon: 'Zap' },
-  { id: 'team_violet', name: 'النسر البنفسجي', nameAr: 'النسر البنفسجي', color: '#8B5CF6', secondaryColor: '#5B21B6', icon: 'Compass' },
-  { id: 'team_cyan', name: 'الصقر السماوي', nameAr: 'الصقر السماوي', color: '#06B6D4', secondaryColor: '#0E7490', icon: 'Anchor' }
+  { id: 'team_lions', name: 'الأسود', nameAr: 'قلعة الأسود', color: '#F59E0B', secondaryColor: '#B45309', icon: 'Crown' },
+  { id: 'team_wolves', name: 'الذئاب', nameAr: 'قلعة الذئاب', color: '#3B82F6', secondaryColor: '#1E40AF', icon: 'Shield' },
+  { id: 'team_falcons', name: 'الصقور', nameAr: 'قلعة الصقور', color: '#10B981', secondaryColor: '#065F46', icon: 'Sword' }
 ];
 
 function calculateReinforcements(territoryCount: number, continentsHeld: ContinentId[]): { base: number; continentBonus: number; total: number } {
@@ -286,11 +283,11 @@ function setupTerritoriesForTeams(teams: Team[]): Record<string, { id: string; t
 
   shuffledTerritories.forEach((t, index) => {
     const assignedTeam = teams[index % teams.length];
-    const initialArmies = 2 + (Math.random() > 0.6 ? 1 : 0);
+    // عدد جنود متساوٍ تماماً لكافة القلاع (3 جنود لكل قلعة)
     territoriesState[t.id] = {
       id: t.id,
       teamId: assignedTeam.id,
-      troops: initialArmies
+      troops: 3
     };
   });
 

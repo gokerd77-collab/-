@@ -239,10 +239,20 @@ export default function App() {
             </div>
           )}
 
-          {/* Number of Teams Selector */}
+          {/* Castles Balance Notice */}
+          <div className="p-3.5 rounded-2xl bg-amber-500/10 border border-amber-500/30 text-right space-y-1">
+            <span className="text-xs text-amber-300 font-bold block">
+              ⚖️ توازن القوى العسكرية: جنود متساوون تماماً
+            </span>
+            <p className="text-[11px] text-slate-300 leading-relaxed">
+              تم ضبط <strong>3 جنود لكل قلعة</strong> بالتساوي التام. عند اختيار 3 قلاع، تحصل كل قلعة على <strong>14 إقليماً</strong> و <strong>42 جندياً</strong> لبداية عادلة ومتوازنة 100%.
+            </p>
+          </div>
+
+          {/* Number of Castles / Teams Selector */}
           <div className="space-y-2 text-right">
             <label className="text-xs font-semibold text-slate-300 block">
-              عدد المجموعات المتنافسة:
+              عدد القلاع المتنافسة:
             </label>
             <div className="grid grid-cols-5 gap-2">
               {[2, 3, 4, 5, 6].map((count) => (
@@ -256,7 +266,7 @@ export default function App() {
                       : 'bg-slate-950 border-slate-800 text-slate-400 hover:border-slate-700'
                   }`}
                 >
-                  {count} مجموعات
+                  {count === 3 ? '3 قلاع ⭐' : `${count} قلاع`}
                 </button>
               ))}
             </div>

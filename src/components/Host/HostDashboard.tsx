@@ -446,7 +446,7 @@ export const HostDashboard: React.FC<HostDashboardProps> = ({ room, onHostAction
           {/* TEAMS SCORECARDS & LEADERBOARD */}
           <div className="p-4 rounded-2xl bg-[#090E17] border border-slate-800 shadow-xl space-y-3">
             <span className="text-xs uppercase font-mono tracking-wider text-slate-400 font-bold block text-right">
-              ترتيب المجموعات والسيطرة
+              ترتيب القلاع والسيطرة
             </span>
 
             <div className="space-y-2">
@@ -474,19 +474,19 @@ export const HostDashboard: React.FC<HostDashboardProps> = ({ room, onHostAction
                         <span className="text-xs font-bold text-white">{team.nameAr}</span>
                         {isActive && (
                           <span className="text-[10px] px-1.5 py-0.2 rounded bg-amber-500/20 text-amber-300 font-bold">
-                            دوره الآن
+                            دورها الآن
                           </span>
                         )}
                         {team.eliminated && (
                           <span className="text-[10px] px-1.5 py-0.2 rounded bg-rose-500/20 text-rose-400 font-bold">
-                            مقصي
+                            سقطت القلعة
                           </span>
                         )}
                       </div>
 
                       <div className="flex items-center gap-3 text-xs font-mono">
                         <span className="text-slate-300">
-                          {team.territoryCount} <span className="text-[10px] font-sans text-slate-500">منطقة</span>
+                          {team.territoryCount} <span className="text-[10px] font-sans text-slate-500">قلعة</span>
                         </span>
                         <span className="text-amber-400 font-bold">
                           {team.totalTroops} <span className="text-[10px] font-sans text-slate-500">جندي</span>

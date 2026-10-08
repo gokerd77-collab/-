@@ -89,7 +89,7 @@ function createLocalRoom(teamCount: number, customTeams?: any): RoomState {
     territoriesState[t.id] = {
       id: t.id,
       teamId: assignedTeam.id,
-      troops: 2 + (Math.random() > 0.6 ? 1 : 0)
+      troops: 3
     };
   });
 

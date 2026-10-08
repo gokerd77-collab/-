@@ -248,7 +248,7 @@ export const MobilePlayerView: React.FC<MobilePlayerViewProps> = ({ room, player
       {activeTab === 'territories' && (
         <div className="mx-3 space-y-2">
           <h3 className="text-xs font-bold text-slate-400 mb-2">
-            المناطق التابعة لفريقك ({myTerritories.length} منطقة):
+            القلاع التابعة لكم ({myTerritories.length} قلعة):
           </h3>
           <div className="grid grid-cols-2 gap-2">
             {myTerritories.map((t) => {
