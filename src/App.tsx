@@ -5,7 +5,8 @@ import {
   createRoomApi,
   getRoomApi,
   joinRoomApi,
-  sendHostActionApi
+  sendHostActionApi,
+  onLocalRoomSync
 } from './services/socket';
 import { HostLobby } from './components/Lobby/HostLobby';
 import { JoinScreen } from './components/Lobby/JoinScreen';
@@ -102,6 +103,16 @@ export default function App() {
       clearInterval(interval);
     };
   }, [room?.roomCode, player?.id]);
+
+  // In-browser sync effect for static hosts (GitHub Pages)
+  useEffect(() => {
+    const unsub = onLocalRoomSync((updatedRoom) => {
+      if (room && updatedRoom.roomCode === room.roomCode) {
+        setRoom(updatedRoom);
+      }
+    });
+    return unsub;
+  }, [room?.roomCode]);
 
   // Load Room for Mobile Join
   const handleLoadRoomForJoin = async (code: string) => {

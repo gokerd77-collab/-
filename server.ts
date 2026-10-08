@@ -892,8 +892,8 @@ async function startServer() {
     });
   }
 
-  server.listen(PORT, () => {
-    console.log(`[SOVEREIGN] Game Server listening on port ${PORT}`);
+  server.listen(Number(PORT), '0.0.0.0', () => {
+    console.log(`[SOVEREIGN] Game Server listening on port ${PORT} (0.0.0.0)`);
   });
 }
 
